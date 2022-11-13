@@ -33,7 +33,7 @@
                     numquam
                     eius recusandae maiores eaque obcaecati dolore ipsam voluptatibus animi, odio?</p>
                 <div class="borde ver">
-                    <a href="pages/alerts.html">Ver más...</a>
+                    <a href="?c=Landing&a=alerts">Ver más...</a>
                 </div>
             </div>
             <div class="port-col-der color-gris-claro">
@@ -49,7 +49,7 @@
                     numquam
                     eius recusandae maiores eaque obcaecati dolore ipsam voluptatibus animi, odio?</p>
                 <div class="borde ver">
-                    <a href="pages/dataTables.html">Ver más...</a>
+                    <a href="?c=Landing&a=dataTables">Ver más...</a>
                 </div>
             </div>
         </section>
@@ -69,7 +69,7 @@
                         ea vero numquam eius recusandae maiores eaque obcaecati dolore ipsam voluptatibus animi, odio?
                     </p>
                     <div class="borde ver">
-                        <a href="pages/canvas.html">Ver más...</a>
+                        <a href="?c=Landing&a=canvas">Ver más...</a>
                     </div>
                 </div>
                 <div class="nos-col-cnt color-gris-oscuro">
@@ -97,7 +97,7 @@
                         ea vero numquam eius recusandae maiores eaque obcaecati dolore ipsam voluptatibus animi, odio?
                     </p>
                     <div class="borde ver">
-                        <a href="pages/jsPdf.html">Ver más...</a>
+                        <a href="?c=Landing&a=jsPdf">Ver más...</a>
                     </div>
                 </div>
             </div>
@@ -113,7 +113,7 @@
                         ea vero numquam eius recusandae maiores eaque obcaecati dolore ipsam voluptatibus animi, odio?
                     </p>
                     <div class="borde ver">
-                        <a href="pages/fullCalendar.html">Ver más...</a>
+                        <a href="?c=Landing&a=fullCalendar">Ver más...</a>
                     </div>
                 </div>
                 <div class="nos-col-cnt color-gris-oscuro">

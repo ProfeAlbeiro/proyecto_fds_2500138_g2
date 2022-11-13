@@ -11,7 +11,7 @@
 		<section class="paginas forms color-gris-claro">			
 			<form class="form form-login" id="form-login" action="../admin.html" method="post"
 				name="formLogin">
-				<a class="enlace-registro" href="register.html">Registro</a>
+				<a class="enlace-registro" href="?c=Login&a=register">Registro</a>
 				<h2 class="form-subtitulo">Iniciar Sesión</h2>
 				<div class="form-cuerpo color-blanco">
 					<div class="form-control">
@@ -32,6 +32,6 @@
 					<input type="reset" id="cancelar-login" value="Cancelar">
 					<input type="submit" id="submit-login" value="Enviar">
 				</div>
-				<a class="enlace-olvido" href="forgot.html">¿Olvidó su Contraseña?</a>
+				<a class="enlace-olvido" href="?c=Login&a=forgot">¿Olvidó su Contraseña?</a>
 			</form>
 		</section>
