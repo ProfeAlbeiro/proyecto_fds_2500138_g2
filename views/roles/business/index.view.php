@@ -17,7 +17,7 @@
                     numquam
                     eius recusandae maiores eaque obcaecati dolore ipsam voluptatibus animi, odio?</p>
                 <div class="borde ver">
-                    <a href="pages/tables.html">Ver más...</a>
+                    <a href="?c=Landing&a=tables">Ver más...</a>
                 </div>
             </div>
             <div class="port-col-cnt color-blanco">

@@ -27,12 +27,12 @@
                 <img src="assets/img/logo-empresa.png" alt="">
             </div>
             <div class="menu">
-                <div class="m-home"><a href="#">Inicio</a></div>
-                <div class="m-portafolio"><a href="#portafolio">Portafolio</a></div>
-                <div class="m-nosotros"><a href="#nosotros">Nosotros</a></div>
-                <div class="m-contactenos"><a href="#contactenos">Contáctenos</a></div>
+                <div class="m-home"><a href="?c=Landing">Inicio</a></div>
+                <div class="m-portafolio"><a href="?c=Landing#portafolio">Portafolio</a></div>
+                <div class="m-nosotros"><a href="?c=Landing#nosotros">Nosotros</a></div>
+                <div class="m-contactenos"><a href="?c=Landing#contactenos">Contáctenos</a></div>
             </div>
             <div class="ingreso">
-                <div class="m-ingreso"><a href="pages/login.html">Iniciar Sesión</a></div>
+                <div class="m-ingreso"><a href="?c=Landing&a=loginWiew">Iniciar Sesión</a></div>
             </div>
         </nav>
