@@ -5,10 +5,10 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Sistema de Información</title>
-	<link rel="shortcut icon" href="img/css.png">
-	<link rel="stylesheet" href="css/all.min.css">
-	<link rel="stylesheet" href="css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/styles-dashboard-bootstrap4.css">	
+	<link rel="shortcut icon" href="assets/img/css.png">
+	<link rel="stylesheet" href="assets/css/all.min.css">
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/css/styles-dashboard-bootstrap4.css">	
 </head>
 
 <body>
@@ -19,7 +19,7 @@
 			<!-- Logo -->
 			<div
 				class="logo row col-lg-3 d-flex align-items-center justify-content-center bg-light border-right border-bottom">
-				<img src="img/logo_sistema.png" class="text-center" alt="Logo">
+				<img src="assets/img/logo_sistema.png" class="text-center" alt="Logo">
 			</div>
 			<!-- Menú -->
 			<div class="menu row col-lg-9 p-0 d-flex align-items-center bg-dark">
@@ -84,7 +84,7 @@
 			<aside id="panel-lateral" class="col-12 col-lg-3 p-0 bg-light">
 				<div id="config" class="config row d-flex justify-content-center p-2 py-lg-4">
 					<div id="config-img" class="col-5 row p-lg-1 p-1 d-flex flex-column align-items-center justify-content-center bg-secondary rounded">
-						<img src="img/usuario.png" class="p-0 bg-white rounded" alt="">
+						<img src="assets/img/usuario.png" class="p-0 bg-white rounded" alt="">
 					</div>
 					<div id="config-text"
 						class="col-7 p-3 d-flex flex-column justify-content-center font-weight-bold bg-light">
@@ -291,37 +291,3 @@
 			</aside>
 			<!-- Área de Trabajo -->
 			<main id="area_principal" class="col-12 col-lg-9 p-0">
-				<!-- Carga de páginas -->
-				<iframe name="area_trabajo" id="area_trabajo" src="modules/0_mains/admin_main.html"></iframe>
-			</main>
-		</section>
-		<!-- Pie de Página -->
-		<footer class="row text-light">
-			<div class="pie-izq col-lg-3 row p-2 d-flex align-items-center justify-content-center text-center bg-dark">
-				<a class="col ocul-panel" href="modules/7_others/email.html" target="area_trabajo">
-					<i class="fa-solid fa-envelope"></i>
-				</a>
-				<a class="col ocul-panel" href="modules/7_others/calendar.html" target="area_trabajo">
-					<i class="fa-solid fa-calendar-days"></i>
-				</a>
-				<a class="col ocul-panel" href="modules/7_others/activities.html" target="area_trabajo">
-					<i class="fa-solid fa-list-check"></i>
-				</a>
-				<a class="col ocul-panel" href="index.html">
-					<i class="fa-sharp fa-solid fa-right-from-bracket"></i>
-				</a>
-			</div>
-			<div class="pie-der col-lg-9 p-2 d-flex flex-column justify-content-center bg-secondary">
-				<p class="p-0 m-0 text-center">Todos los Derechos Reservados a:</p>
-				<p class="p-0 m-0 text-center">Instructor E. Albeiro Ramos V. © 2022</p>
-				<p class="p-0 m-0 text-center">earamos42@misena.edu.co / profealbeiro2020@gmail.com</p>
-			</div>
-		</footer>
-	</div>
-	<script src="js/jquery.slim.min.js"></script>
-	<script src="js/popper.min.js"></script>
-	<script src="js/bootstrap.min.js"></script>
-	<script src="js/scripts-dash.js"></script>
-</body>
-
-</html>
