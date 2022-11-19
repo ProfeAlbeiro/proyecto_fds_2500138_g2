@@ -12,6 +12,7 @@
 
         // Crear Rol
         public function createRol(){
+            // Método Get
             if ($_SERVER['REQUEST_METHOD'] == 'GET') {
                 require_once "views/roles/admin/header.php";
                 require_once "views/modules/1_users/rol_create.view.php";
