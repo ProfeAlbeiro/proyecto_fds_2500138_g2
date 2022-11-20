@@ -71,8 +71,22 @@
             require_once "views/roles/admin/footer.php";
 			
 		}
-
+        public function updateRol(){
+            // Método Get
+            if ($_SERVER['REQUEST_METHOD'] == 'GET') {
+                $rol = $this->userDao->getById($_GET['idRol']);
+                require_once "views/roles/admin/header.php";                
+                require_once "views/modules/1_users/rol_update.view.php";
+                require_once "views/roles/admin/footer.php";
+            }
+            // Método Post
+            if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+                header("Location: ?c=Users&a=readRol");
+            }
+            
+        }
         // Actualizar Rol
+
 
         // Eliminar Rol
     }

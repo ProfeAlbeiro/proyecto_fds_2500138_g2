@@ -40,7 +40,7 @@
                                 <td><?php echo $rol->getCodigoRol(); ?></td>
                                 <td><?php echo $rol->getNombreRol(); ?></td>
                                 <td class="tabla-acciones">
-                                    <a class="tabla-edit" href="user_update.html"><i class="fas fa-edit"></i></a>
+                                    <a class="tabla-edit" href="?c=Users&a=updateRol&idRol=<?php echo $rol->getCodigoRol() ?>"><i class="fas fa-edit"></i></a>
                                     <a class="tabla-delete" href="#" onclick="deleteUser()"><i class="fas fa-trash-alt"></i></a>
                                 </td>
                             </tr>
