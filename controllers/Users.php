@@ -27,7 +27,12 @@
             // Método Post
             if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
-                // Capturar los datos y crear Objeto DTO
+                // Capturar los datos
+                
+                // Validar los datos
+                // ?????????
+
+                // Crear Objeto DTO
                 # Por Constructor
                 $userDto = new UserDto(
                     $_POST['rol_codigo'],
@@ -37,10 +42,8 @@
                 # Por Método Set('parámetro');
                 // $userDto2 = new UserDto;
                 // $userDto2->setCodigoRol($_POST['rol_codigo']);
-                // $userDto2->setNombreRol($_POST['rol_nombre']);
+                // $userDto2->setNombreRol($_POST['rol_nombre']);                
                 
-                // Validar los datos
-                // ?????????
 
                 // Pasar el Objeto DTO al método (CRUD) del Objeto DAO
                 $this->userDao->createRolDao($userDto);
