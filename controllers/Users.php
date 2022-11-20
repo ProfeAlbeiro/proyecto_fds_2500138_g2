@@ -70,6 +70,8 @@
             require_once "views/roles/admin/footer.php";
 			
 		}
+        
+        // Actualizar Rol
         public function updateRol(){
             // Método Get
             if ($_SERVER['REQUEST_METHOD'] == 'GET') {
@@ -89,9 +91,11 @@
             }
             
         }
-        // Actualizar Rol
-
 
         // Eliminar Rol
+        public function deleteRol(){
+			$this->userDao->deleteRolDao($_GET['idRol']);
+			header('Location: ?c=Users&a=readRol');			
+		}
     }
 ?>

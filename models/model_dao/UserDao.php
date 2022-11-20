@@ -81,7 +81,7 @@
 			}
 		}
 
-		# Crear un Rol
+		# Actualizar un Rol
         public function updateRolDao($userDto){
             try {
 				// Crear la Consulta
@@ -104,6 +104,18 @@
 				die($e->getMessage());	
 			}
         }
+
+		# Eliminar un Rol
+		public function deleteRolDao($idRol){
+			try {
+				$sql = 'DELETE FROM ROLES WHERE codigo_rol = :idRol';
+				$dbh = $this->pdo->prepare($sql);
+				$dbh->bindValue('idRol', $idRol);
+				$dbh->execute();
+			} catch (Exception $e) {
+				die($e->getMessage());
+			}
+		}
 
     }
 ?>
