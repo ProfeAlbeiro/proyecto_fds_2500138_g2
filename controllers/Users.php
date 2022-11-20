@@ -57,7 +57,6 @@
                 // echo "<br><h1>Objeto 2: Métodos Set</h1>";
                 // echo "<br><h3>Código Rol: " . $userDto2->getCodigoRol() . "</h3>";
                 // echo "<br><h3>Nombre Rol: " . $userDto2->getNombreRol() . "</h3>";
-                
                 header("Location: ?c=Users&a=readRol");
             }
             
@@ -81,6 +80,11 @@
             }
             // Método Post
             if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+                $userDto = new UserDto(
+                    $_POST['rol_codigo'],
+                    $_POST['rol_nombre']
+                );
+                $this->userDao->updateRolDao($userDto);
                 header("Location: ?c=Users&a=readRol");
             }
             

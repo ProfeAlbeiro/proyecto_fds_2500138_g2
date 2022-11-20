@@ -26,7 +26,7 @@
         <!-- Contenido -->
         <div class="contenido row bg-light p-2">
             <div class="col p-0 bg-light">
-                <form id="formRolCreate" name="formRolCreate" class="card p-3 bg-dark text-white d-lg-flex justify-content-center w-100 border rounded p-2 needs-validation" action="?c=Users&a=createRol" method="post" novalidate>
+                <form id="formRolCreate" name="formRolCreate" class="card p-3 bg-dark text-white d-lg-flex justify-content-center w-100 border rounded p-2 needs-validation" action="?c=Users&a=updateRol" method="post" novalidate>
                     <div class="form-row">                        
                         <div class="form-group col-md-6">
                             <label for="rol_codigo">Cógido Rol</label>
