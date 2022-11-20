@@ -46,9 +46,9 @@
                 $this->userDao->createRolDao($userDto);
 
                 // Redireccionar a un controlador o una página web                
-                require_once "views/roles/admin/header.php";
+               
                 # Objeto 1
-                echo "Se ha creado el ROL";
+                
                 // echo "<br><h1>Objeto 1: Constructor</h1>";
                 // echo "<br><h3>Código Rol: " . $userDto->getCodigoRol() . "</h3>";
                 // echo "<br><h3>Nombre Rol: " . $userDto->getNombreRol() . "</h3>";
@@ -57,14 +57,20 @@
                 // echo "<br><h1>Objeto 2: Métodos Set</h1>";
                 // echo "<br><h3>Código Rol: " . $userDto2->getCodigoRol() . "</h3>";
                 // echo "<br><h3>Nombre Rol: " . $userDto2->getNombreRol() . "</h3>";
-
-                require_once "views/roles/admin/footer.php";
-                // header("Location: ?c=Dashboard");
+                
+                header("Location: ?c=Users&a=readRol");
             }
             
         }
 
-        // Consultar Roles
+        // Consultar Roles        
+		public function readRol(){			
+			$roles = $this->userDao->readRolDao();
+			require_once "views/roles/admin/header.php";            
+            require_once "views/modules/1_users/rol_read.view.php";
+            require_once "views/roles/admin/footer.php";
+			
+		}
 
         // Actualizar Rol
 

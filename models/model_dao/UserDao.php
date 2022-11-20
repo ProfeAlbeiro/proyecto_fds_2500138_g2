@@ -39,5 +39,23 @@
 			}
         }
 
+		# Consultar Roles
+		public function readRolDao(){
+			try {
+				$rolList = [];
+				$sql = 'SELECT * FROM ROLES';
+				$dbh = $this->pdo->query($sql);
+				foreach ($dbh->fetchAll() as $rol) {
+					$rolList[] = new UserDto(
+						$rol['codigo_rol'],
+						$rol['nombre_rol']						
+					);
+				}
+				return $rolList;
+			} catch (Exception $e) {
+				die($e->getMessage());
+			}
+		}
+
     }
 ?>

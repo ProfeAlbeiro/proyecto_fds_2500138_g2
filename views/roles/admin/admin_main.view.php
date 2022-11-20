@@ -27,6 +27,7 @@
                         <ul class="list-group list-group-flush">
                             <li class="list-group-item"><a href="?c=Users&a=createRol" class="card-link">Crear Rol</a>
                             </li>
+                            <li class="list-group-item"><a href="?c=Users&a=readRol" class="card-link">Consultar Roles</a></li>
                             <li class="list-group-item"><a href="" class="card-link">Crear usuarios</a>
                             </li>
                             <li class="list-group-item"><a href="" class="card-link">Consultar
