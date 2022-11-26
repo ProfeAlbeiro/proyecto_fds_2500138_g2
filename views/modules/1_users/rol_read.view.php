@@ -3,7 +3,7 @@
             <div class="col p-0">
                 <div aria-label="breadcrumb">
                     <ol class="breadcrumb rounded-0 m-0 p-2 bg-white">
-                        <li class="breadcrumb-item"><a href="../0_mains/admin_main.html">Inicio</a></li>
+                        <li class="breadcrumb-item"><a href="?c=Dashboard">Inicio</a></li>
                         <li class="breadcrumb-item">Módulo Usuarios</li>
                         <li class="breadcrumb-item active" aria-current="page">Consultar Usuarios</li>
                     </ol>
@@ -17,9 +17,9 @@
                 <div class="col-6 p-0 d-flex justify-content-start align-items-center">
                     <h5 class="m-0">Consultar Roles</h5>
                 </div>
-                <!-- <div class="col-6 d-flex justify-content-end align-items-center p-0">
-                    <a href="user_create.html" class="btn btn-light">Crear Usuario</a>
-                </div> -->
+                <div class="col-6 d-flex justify-content-end align-items-center p-0">
+                    <a href="?c=Users&a=createRol" class="btn btn-light">Crear Rol</a>
+                </div>
             </div>
         </div>
 

@@ -112,15 +112,22 @@
 									<div class="card">
 										<ul class="list-group list-group-flush">
 											<li class="list-group-item p-0 bg-light">
-												<a href="modules/1_users/user_create.html" target="area_trabajo"
-													target="area_trabajo"
-													class="card-link d-block p-2 px-lg-3 py-lg-1 ocul-panel">Crear
-													Usuario</a>
+												<a href="?c=Users&a=createRol"
+													
+													class="card-link d-block p-2 px-lg-3 py-lg-1 ocul-panel">Crear Rol</a>
 											</li>
 											<li class="list-group-item p-0 bg-light">
-												<a href="modules/1_users/user_read.html" target="area_trabajo"
-													class="card-link d-block p-2 px-lg-3 py-lg-1 ocul-panel">Consultar
-													Usuarios</a>
+												<a href="?c=Users&a=readRol" 
+													class="card-link d-block p-2 px-lg-3 py-lg-1 ocul-panel">Consultar Roles</a>
+											</li>
+											<li class="list-group-item p-0 bg-light">
+												<a href="?c=Users&a=createUser" 
+													
+													class="card-link d-block p-2 px-lg-3 py-lg-1 ocul-panel">Crear Usuario</a>
+											</li>
+											<li class="list-group-item p-0 bg-light">
+												<a href="?c=Users&a=readUser" 
+													class="card-link d-block p-2 px-lg-3 py-lg-1 ocul-panel">Consultar Usuarios</a>
 											</li>
 										</ul>
 									</div>

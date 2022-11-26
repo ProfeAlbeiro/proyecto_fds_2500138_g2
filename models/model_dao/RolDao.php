@@ -1,12 +1,12 @@
 <?php
-    class UserDao{
+    class RolDao{
         
         // ATRIBUTOS: Encapsulados
         private $pdo;
 
         // MÉTODOS:
 
-        # Sobrecarga de Constructores: Conexión a la Base de Datos
+        # Sobrecarga de Constructores
         public function __construct(){
             try {
 				$this->pdo = DataBase::connection();				
@@ -15,31 +15,21 @@
 			}
         }
 
-        # Crear un Usuario
-        public function createUserDao($userDto){
+        # Crear un Rol
+        public function createRolDao($rolDto){
             try {
 				// Crear la Consulta
-				$sql = 'INSERT INTO USUARIOS VALUES (
+				$sql = 'INSERT INTO ROLES VALUES (
 							:codigoRol,
-							:codigoUser,							
-							:nombresUser,							
-							:apellidosUser,							
-							:correoUser,							
-							sha1(:passUser),							
-							:estadoUser							
+							:nombreRol							
 						)';
 
 				// Preparar la BBDD para la consulta
 				$dbh = $this->pdo->prepare($sql);
 
 				// Vincular los datos del objeto a la consulta de Inserción
-				$dbh->bindValue('codigoRol', $userDto->getCodigoRol());			
-				$dbh->bindValue('codigoUser', $userDto->getCodigoUser());
-				$dbh->bindValue('nombresUser', $userDto->getNombresUser());
-				$dbh->bindValue('apellidosUser', $userDto->getApellidosUser());
-				$dbh->bindValue('correoUser', $userDto->getCorreoUser());
-				$dbh->bindValue('passUser', $userDto->getPassUser());
-				$dbh->bindValue('estadoUser', $userDto->getEstadoUser());
+				$dbh->bindValue('codigoRol', $rolDto->getCodigoRol());			
+				$dbh->bindValue('nombreRol', $rolDto->getNombreRol());
 
 				// Ejecutar la consulta
 				$dbh->execute();
@@ -48,8 +38,8 @@
 				die($e->getMessage());	
 			}
         }
-		/*
-		# Consultar Usuarios
+
+		# Consultar Roles
 		public function readRolDao(){
 			try {
 				$rolList = [];
@@ -67,7 +57,7 @@
 			}
 		}
 
-		# Obtener IdUser
+		# Obtener IdRol
 		public function getById($idRol){
 			try {
 				# Consulta
@@ -91,7 +81,7 @@
 			}
 		}
 
-		# Actualizar un Usuario
+		# Actualizar un Rol
         public function updateRolDao($rolDto){
             try {
 				// Crear la Consulta
@@ -115,7 +105,7 @@
 			}
         }
 
-		# Eliminar un Usuario
+		# Eliminar un Rol
 		public function deleteRolDao($idRol){
 			try {
 				$sql = 'DELETE FROM ROLES WHERE codigo_rol = :idRol';
@@ -126,7 +116,6 @@
 				die($e->getMessage());
 			}
 		}
-		*/
 
     }
 ?>

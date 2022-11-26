@@ -3,7 +3,12 @@
         
         // ATRIBUTOS: Encapsulados
         private $codigoRol;
-        private $nombreRol;
+        private $codigoUser;
+        private $nombresUser;
+        private $apellidosUser;
+        private $correoUser;
+        private $passUser;
+        private $estadoUser;
 
         // MÉTODOS:
 
@@ -17,9 +22,14 @@
         }
 
         # Constructor que crea el objeto por defecto
-        public function __construct2($codigoRol,$nombreRol){
+        public function __construct7($codigoRol,$codigoUser,$nombresUser,$apellidosUser,$correoUser,$passUser,$estadoUser){
 			$this->codigoRol = $codigoRol;
-			$this->nombreRol = $nombreRol;
+			$this->codigoUser = $codigoUser;
+			$this->nombresUser = $nombresUser;
+			$this->apellidosUser = $apellidosUser;
+			$this->correoUser = $correoUser;
+			$this->passUser = $passUser;
+			$this->estadoUser = $estadoUser;
 		}
 
         # Métodos de Acceso a Datos: Setters y Getters
@@ -31,12 +41,48 @@
 		public function getCodigoRol(){
 			return $this->codigoRol;
 		}
-        # Nombre del Rol
-        public function setNombreRol($nombreRol){
-			$this->nombreRol = $nombreRol;
+        # Código Usuario
+        public function setCodigoUser($codigoUser){
+			$this->codigoUser = $codigoUser;
 		}
-		public function getNombreRol(){
-			return $this->nombreRol;
+		public function getCodigoUser(){
+			return $this->codigoUser;
 		}
+        # Nombres Usuario
+        public function setNombresUser($nombresUser){
+			$this->nombresUser = $nombresUser;
+		}
+		public function getNombresUser(){
+			return $this->nombresUser;
+		}
+        # Apellidos Usuario
+        public function setApellidosUser($apellidosUser){
+			$this->apellidosUser = $apellidosUser;
+		}
+		public function getApellidosUser(){
+			return $this->apellidosUser;
+		}
+        # Correo Usuario
+        public function setCorreoUser($correoUser){
+			$this->correoUser = $correoUser;
+		}
+		public function getCorreoUser(){
+			return $this->correoUser;
+		}
+        # Password Usuario
+        public function setPassUser($passUser){
+			$this->passUser = $passUser;
+		}
+		public function getPassUser(){
+			return $this->passUser;
+		}
+        # Estado Usuario
+        public function setEstadoUser($estadoUser){
+			$this->estadoUser = $estadoUser;
+		}
+		public function getEstadoUser(){
+			return $this->estadoUser;
+		}
+        
     }
 ?>

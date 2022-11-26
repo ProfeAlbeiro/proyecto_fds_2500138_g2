@@ -18,7 +18,7 @@
                     <h5 class="m-0">Crear Rol</h5>
                 </div>
                 <div class="col-6 d-flex justify-content-end align-items-center p-0">
-                    <!-- <a href="user_read.html" class="btn btn-light">Consultar Usuarios</a> -->
+                    <a href="?c=Users&a=readRol" class="btn btn-light">Consultar Roles</a>
                 </div>
             </div>
         </div>

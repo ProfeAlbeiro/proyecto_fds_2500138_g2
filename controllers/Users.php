@@ -1,13 +1,17 @@
 <?php
 
+    require_once "models/model_dto/RolDto.php";
     require_once "models/model_dto/UserDto.php";
+    require_once "models/model_dao/RolDao.php";
     require_once "models/model_dao/UserDao.php";
 
     class Users{
         // Atributo Encapsulado
+        private $rolDao;
         private $userDao;
 
         public function __construct(){
+            $this->rolDao = new RolDao;
             $this->userDao = new UserDao;
         }
         public function index(){            
@@ -26,40 +30,11 @@
             }
             // Método Post
             if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-
-                // Capturar los datos
-                
-                // Validar los datos
-                // ?????????
-
-                // Crear Objeto DTO
-                # Por Constructor
-                $userDto = new UserDto(
+                $rolDto = new RolDto(
                     $_POST['rol_codigo'],
                     $_POST['rol_nombre']
                 );
-                
-                # Por Método Set('parámetro');
-                // $userDto2 = new UserDto;
-                // $userDto2->setCodigoRol($_POST['rol_codigo']);
-                // $userDto2->setNombreRol($_POST['rol_nombre']);                
-                
-
-                // Pasar el Objeto DTO al método (CRUD) del Objeto DAO
-                $this->userDao->createRolDao($userDto);
-
-                // Redireccionar a un controlador o una página web                
-               
-                # Objeto 1
-                
-                // echo "<br><h1>Objeto 1: Constructor</h1>";
-                // echo "<br><h3>Código Rol: " . $userDto->getCodigoRol() . "</h3>";
-                // echo "<br><h3>Nombre Rol: " . $userDto->getNombreRol() . "</h3>";
-
-                # Objeto 2
-                // echo "<br><h1>Objeto 2: Métodos Set</h1>";
-                // echo "<br><h3>Código Rol: " . $userDto2->getCodigoRol() . "</h3>";
-                // echo "<br><h3>Nombre Rol: " . $userDto2->getNombreRol() . "</h3>";
+                $this->rolDao->createRolDao($rolDto);
                 header("Location: ?c=Users&a=readRol");
             }
             
@@ -67,29 +42,28 @@
 
         // Consultar Roles        
 		public function readRol(){			
-			$roles = $this->userDao->readRolDao();
+			$roles = $this->rolDao->readRolDao();
 			require_once "views/roles/admin/header.php";            
             require_once "views/modules/1_users/rol_read.view.php";
             require_once "views/roles/admin/footer.php";
-			
 		}
         
         // Actualizar Rol
         public function updateRol(){
             // Método Get
             if ($_SERVER['REQUEST_METHOD'] == 'GET') {
-                $rol = $this->userDao->getById($_GET['idRol']);
+                $rol = $this->rolDao->getById($_GET['idRol']);
                 require_once "views/roles/admin/header.php";                
                 require_once "views/modules/1_users/rol_update.view.php";
                 require_once "views/roles/admin/footer.php";
             }
             // Método Post
             if ($_SERVER['REQUEST_METHOD'] == 'POST') {
-                $userDto = new UserDto(
+                $rolDto = new RolDto(
                     $_POST['rol_codigo'],
                     $_POST['rol_nombre']
                 );
-                $this->userDao->updateRolDao($userDto);
+                $this->rolDao->updateRolDao($rolDto);
                 header("Location: ?c=Users&a=readRol");
             }
             
@@ -97,8 +71,70 @@
 
         // Eliminar Rol
         public function deleteRol(){
-			$this->userDao->deleteRolDao($_GET['idRol']);
+			$this->rolDao->deleteRolDao($_GET['idRol']);
 			header('Location: ?c=Users&a=readRol');			
 		}
+
+        // Crear Usuario
+        public function createUser(){
+            // Método Get
+            if ($_SERVER['REQUEST_METHOD'] == 'GET') {
+                require_once "views/roles/admin/header.php";
+                require_once "views/modules/1_users/user_create.view.php";
+                require_once "views/roles/admin/footer.php";
+            }
+            // Método Post
+            if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+                $userDto = new UserDto(
+                    $_POST['rol_codigo'],
+                    $_POST['user_codigo'],
+                    $_POST['user_nombres'],
+                    $_POST['user_apellidos'],
+                    $_POST['user_correo'],
+                    $_POST['user_pass'],
+                    $_POST['user_estado']
+                );
+                $this->userDao->createUserDao($userDto);
+                header("Location: ?c=Users&a=readUser");
+            }
+            
+        }
+        
+        // Consultar Usuarios        
+		public function readUser(){			
+			// $roles = $this->rolDao->readRolDao();
+			require_once "views/roles/admin/header.php";            
+            require_once "views/modules/1_users/user_read.view.php";
+            require_once "views/roles/admin/footer.php";
+		}
+        /*
+        // Actualizar Usuarios
+        public function updateUser(){
+            // Método Get
+            if ($_SERVER['REQUEST_METHOD'] == 'GET') {
+                $rol = $this->rolDao->getById($_GET['idRol']);
+                require_once "views/roles/admin/header.php";                
+                require_once "views/modules/1_users/rol_update.view.php";
+                require_once "views/roles/admin/footer.php";
+            }
+            // Método Post
+            if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+                $rolDto = new RolDto(
+                    $_POST['rol_codigo'],
+                    $_POST['rol_nombre']
+                );
+                $this->rolDao->updateRolDao($rolDto);
+                header("Location: ?c=Users&a=readRol");
+            }
+            
+        }
+
+        // Eliminar Usuarios
+        public function deleteUser(){
+			$this->rolDao->deleteRolDao($_GET['idRol']);
+			header('Location: ?c=Users&a=readRol');			
+		}
+        */
+
     }
 ?>

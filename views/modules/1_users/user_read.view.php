@@ -1,31 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sistema de Información</title>
-    <link rel="shortcut icon" href="img/css.png">
-    <link rel="stylesheet" href="https://cdn.datatables.net/1.12.1/css/jquery.dataTables.min.css">
-    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.2.3/css/buttons.dataTables.min.css">
-    <link rel="stylesheet" href="https://cdn.datatables.net/select/1.4.0/css/select.dataTables.min.css">
-    <link rel="stylesheet" href="https://cdn.datatables.net/rowreorder/1.2.8/css/rowReorder.dataTables.min.css">
-    <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.3.0/css/responsive.dataTables.min.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@5.11.3/main.css">    
-    <link rel="stylesheet" href="../../css/all.min.css">
-    <link rel="stylesheet" href="../../css/bootstrap.min.css">
-    <link rel="stylesheet" href="../../css/styles-dashboard-bootstrap4.css">
-</head>
-
-<body>
-    <!-- Contenedor -->
-    <div class="container-fluid captura-id">
         <!-- Migas de Pan -->
         <div class="migas row d-flex align-items-center bg-white border-bottom">
             <div class="col p-0">
                 <div aria-label="breadcrumb">
                     <ol class="breadcrumb rounded-0 m-0 p-2 bg-white">
-                        <li class="breadcrumb-item"><a href="../0_mains/admin_main.html">Inicio</a></li>
+                        <li class="breadcrumb-item"><a href="?c=Dashboard">Inicio</a></li>
                         <li class="breadcrumb-item">Módulo Usuarios</li>
                         <li class="breadcrumb-item active" aria-current="page">Consultar Usuarios</li>
                     </ol>
@@ -40,7 +18,7 @@
                     <h5 class="m-0">Consultar Usuarios</h5>
                 </div>
                 <div class="col-6 d-flex justify-content-end align-items-center p-0">
-                    <a href="user_create.html" class="btn btn-light">Crear Usuario</a>
+                    <a href="?c=Users&a=createUser" class="btn btn-light">Crear Usuario</a>
                 </div>
             </div>
         </div>
