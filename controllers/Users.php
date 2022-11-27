@@ -15,9 +15,7 @@
             $this->userDao = new UserDao;
         }
         public function index(){            
-            require_once "views/roles/admin/header.php";
-            require_once "views/roles/admin/admin_main.view.php";
-            require_once "views/roles/admin/footer.php";
+            header("Location: ?c=Dashboard");
         }
 
         // Crear Rol
